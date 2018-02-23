@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title ng-controller="datos">Ejercicios | {{ title }}</title>
+  <script src="js/angular.min.js"></script>
+</head>
+<body>
+  <h1>Listado de ejercicios de {{ title }}</h1>
+  <hr>
+  <div>
+    <ul>
+      <li><a href="ejemplo.html">Ejemplo 1</a></li>
+      <li><a href="expresiones.html">expresiones</a></li>
+      <li><a href="expresiones2.html">expresiones 2</a></li>
+      <li><a href="filtros.html">filtros</a></li>
+      <li><a href="filtros2-fechas.html">filtros en fechas</a></li>
+      <li><a href="filtros3-personalizados.html">filtros personalizados</a></li>
+      <li><a href="filtros4-dinamico-datos.html">filtros dinamicos en datos</a></li>
+      <li><a href="filtros5.html">filtros 5</a></li>
+      <li><a href="controladores.html">controladores</a></li>
+      <li><a href="controladores2.html">controladores 2</a></li>
+    </ul>
+
+  </div>
+
+</body>
+<script type="text/javascript">
+
+var myApp = angular.module('myApp',[]);
+
+myApp.controller('datos', function($scope){
+  $scope.title = "Angular JS";
+});
+
+</script>
+</html>

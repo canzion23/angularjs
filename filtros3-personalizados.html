@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="filtros">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/angular.min.js">
+
+  </script>
+</head>
+<body>
+
+  <h1>{{"dinosaurio" | cambiar:"Ñ":"o"}}</h1>
+
+  <script type="text/javascript">
+
+  var filtroApp = angular.module('filtros', []);
+
+  filtroApp.filter('cambiar', function(){
+
+    var cambiarFiltro = function(datosOriginales, primerValor, segundoValor){
+
+      //var nuevosDatos = datosOriginales.replace(RegExp("o","g"),"_");
+      //var nuevosDatos = datosOriginales.replace(/o/g,primerValor);
+      var nuevosDatos = datosOriginales.replace(RegExp(segundoValor,"g"),primerValor);
+
+      return nuevosDatos;
+    };
+
+    return cambiarFiltro;
+
+
+
+
+  });
+
+  </script>
+
+</body>
+</html>

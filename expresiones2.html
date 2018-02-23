@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="objetos">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="js/angular.min.js">
+
+  </script>
+</head>
+<body>
+
+  <div ng-controller="libros">
+    <p>El autor del libro es: {{libro.autor}}</p>
+    <p>El titulo del libro es: {{libro.titulo}}</p>
+    <p>El editorial del libro es: {{libro.editorial}}</p>
+
+
+  </div>
+
+  <script type="text/javascript">
+
+    var objetos = angular.module('objetos',[]);
+
+    objetos.controller('libros', function($scope){
+      $scope.libro = {};
+      $scope.libro.autor = "Pedro Gonzalez";
+      $scope.libro.titulo = "Historia de una madre soltera";
+      $scope.libro.editorial = "Geoklar";
+
+
+
+    });
+
+  </script>
+
+</body>
+</html>
